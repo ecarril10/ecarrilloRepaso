@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ecarrilloRepaso.Page2">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Red"/>
+                <Setter Property="TextColor" Value="Beige"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbUsuario" TextColor="Red" FontSize="16" HorizontalTextAlignment="End" />
+
+            <Label Text="Ventana Dos" FontSize="24" HorizontalTextAlignment="Center"/>
+            <Entry x:Name="txtDato" Placeholder="Ingrese un valor numerico del 1 al 100" Keyboard="Numeric" TextChanged="txtDato_TextChanged"/>
+            <Picker x:Name="pkAlumno" Title="ESTDIANTES">
+                <Picker.Items>
+                    <x:String>Renato</x:String>
+                    <x:String>Caelos</x:String>
+                    <x:String>Elias</x:String>
+                    <x:String>José</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button x:Name="btAbrir" Text="Abrir Ventana 3" Clicked="btAbrir_Clicked" Style="{StaticResource ButtonStyle}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
